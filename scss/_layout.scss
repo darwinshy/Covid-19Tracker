@@ -1,0 +1,30 @@
+.container {
+  max-width: 120rem;
+  margin: 10rem auto;
+  background-color: var(--color-Grey-light-2);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+}
+
+.content {
+  display: flex;
+}
+
+.header {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7rem;
+  background-color: #ffffff;
+  border-bottom: var(--color-Grey-light-2);
+}
+
+.sidebar {
+  flex: 1 0 15%;
+  background-color: var(--color-Grey-dark-1);
+}
+
+.covid-view {
+  flex: 1 0 0;
+}

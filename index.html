@@ -3,10 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid-19 Tracker</title>
+    <title>C-19 Tracker</title>
     <link rel="stylesheet" href="scss/main.css" />
   </head>
   <body>
-      
+    <div class="container">
+      <header class="header">
+        <img src="img/covid.jpg" alt="" class="logo" />
+
+        <form action="#" class="search">
+          <input type="text" class="search__input" placeholder="Search State" />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+      </header>
+      <div class="content">
+        <nav class="sidebar">Navigation</nav>
+        <main class="covid-view">Covid View</main>
+      </div>
+    </div>
   </body>
 </html>
