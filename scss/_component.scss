@@ -113,15 +113,44 @@
     padding: 1rem 3rem;
     &__confirmed {
       background-color: red;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: white;
+        color: red;
+        width: 110%;
+      }
     }
     &__recovered {
       background-color: green;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: white;
+        color: green;
+        width: 110%;
+      }
     }
     &__active {
       background-color: blueviolet;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: white;
+        color: blueviolet;
+        width: 110%;
+      }
     }
     &__deaths {
       background-color: grey;
+      transition: all 0.2s;
+      width: 110%;
+
+      &:hover {
+        background-color: white;
+        color: grey;
+        width: 120%;
+      }
     }
   }
 
@@ -141,7 +170,7 @@
 .overview {
   display: flex;
   align-items: center;
-
+  background-color: white;
   &__heading {
     font-size: 2rem;
     font-weight: 200;
@@ -171,6 +200,28 @@
     color: white;
     margin-left: 3rem;
     background-color: var(--color-primary);
+  }
+
+  &__details {
+    display: flex;
+    &--content {
+      // background-color: blue;
+      flex-basis: 70%;
+    }
+
+    &--map {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 70%;
+      #svg2 {
+        fill: #efefef;
+        transform: scale(0.6);
+
+        path {
+          stroke: rgb(147, 147, 147);
+        }
+      }
+    }
   }
 }
 .btn-inline {

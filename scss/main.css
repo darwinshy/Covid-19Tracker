@@ -105,6 +105,12 @@ body {
           flex: 1 0 0;
 }
 
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .logo {
   height: 5rem;
   margin: 1.5rem;
@@ -231,18 +237,51 @@ body {
 
 .cases__item__confirmed {
   background-color: red;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.cases__item__confirmed:hover {
+  background-color: white;
+  color: red;
+  width: 110%;
 }
 
 .cases__item__recovered {
   background-color: green;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.cases__item__recovered:hover {
+  background-color: white;
+  color: green;
+  width: 110%;
 }
 
 .cases__item__active {
   background-color: blueviolet;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.cases__item__active:hover {
+  background-color: white;
+  color: blueviolet;
+  width: 110%;
 }
 
 .cases__item__deaths {
   background-color: grey;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 110%;
+}
+
+.cases__item__deaths:hover {
+  background-color: white;
+  color: grey;
+  width: 120%;
 }
 
 .cases__count__primary {
@@ -263,6 +302,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: white;
 }
 
 .overview__heading {
@@ -297,6 +337,39 @@ body {
   color: white;
   margin-left: 3rem;
   background-color: var(--color-primary);
+}
+
+.overview__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overview__details--content {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.overview__details--map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.overview__details--map #svg2 {
+  fill: #efefef;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.overview__details--map #svg2 path {
+  stroke: #939393;
 }
 
 .btn-inline {
