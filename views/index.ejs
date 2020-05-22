@@ -21,8 +21,79 @@
         </form>
       </header>
       <div class="content">
-        <nav class="sidebar">Navigation</nav>
-        <main class="covid-view">Covid View</main>
+        <nav class="sidebar">
+          <ul class="side-nav">
+            <li class="side-nav__item side-nav__item--active">
+              <a href="#" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="side-nav__item side-nav__item--active">
+              <a href="#" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                </svg>
+                <span>States</span>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">Copyright Reserved Shashwat Priyadarshy</div>
+        </nav>
+        <main class="covid-view">
+          <div class="cases">
+            <div class="cases__item cases__item__confirmed">
+              <h2
+                class="cases__count__primary cases__count__primary__confirmed"
+              >
+                Confirmed
+              </h2>
+              <h1
+                class="cases__count__secondary cases__count__secondary__confirmed"
+              >
+                1,18,452
+              </h1>
+            </div>
+            <div class="cases__item cases__item__active">
+              <h2 class="cases__count__primary cases__count__primary__active">
+                Active
+              </h2>
+              <h1
+                class="cases__count__secondary cases__count__secondary__active"
+              >
+                66,308
+              </h1>
+            </div>
+            <div class="cases__item cases__item__recovered">
+              <h2
+                class="cases__count__primary cases__count__primary__recovered"
+              >
+                Recovered
+              </h2>
+              <h1
+                class="cases__count__secondary cases__count__secondary__recovered"
+              >
+                48,553
+              </h1>
+            </div>
+            <div class="cases__item cases__item__deaths">
+              <h2 class="cases__count__primary cases__count__primary__deaths">
+                Deaths
+              </h2>
+              <h1
+                class="cases__count__secondary cases__count__secondary__deaths"
+              >
+                3,584
+              </h1>
+            </div>
+          </div>
+
+          <div class="overview">
+            <h1 class="overview__heading">Covid 19</h1>
+          </div>
+        </main>
       </div>
     </div>
   </body>
