@@ -17,7 +17,7 @@
   justify-content: space-between;
   height: 7rem;
   background-color: #ffffff;
-  border-bottom: var(--color-Grey-light-2);
+  border-bottom: 1px solid var(--color-Grey-light-2);
 }
 
 .sidebar {
@@ -29,7 +29,6 @@
 }
 
 .covid-view {
-
   display: flex;
   flex-direction: column;
   min-height: 60vh;
