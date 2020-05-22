@@ -22,7 +22,7 @@
     width: 80%;
     transition: all 0.2s;
     margin-right: -4rem;
-    color: var(--color-Grey-light-3);
+
     &:focus {
       outline: none;
       background-color: var(--color-Grey-light-3);
@@ -38,6 +38,100 @@
   &__icon {
     height: 2rem;
     width: 2rem;
-    fill: ;
+  }
+}
+
+// ////////////////////////////////////////////
+// Side Nav
+
+.side-nav {
+  font-size: 1.5rem;
+  margin-top: 3.5rem;
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.2s, width 0.2s 0.2s;
+  }
+
+  &__item:hover::before {
+    width: 100%;
+    transform: scaleY(1);
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: var(--color-Grey-light-1);
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: start;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 2rem;
+    fill: currentColor;
+  }
+}
+
+.legal {
+  text-align: center;
+  color: var(--color-Grey-light-4);
+  padding: 2rem;
+}
+
+.cases {
+  display: flex;
+  align-content: center;
+
+  color: white;
+
+  &__item {
+    width: 100%;
+
+    padding: 1rem 3rem;
+    &__confirmed {
+      background-color: red;
+    }
+    &__recovered {
+      background-color: green;
+    }
+    &__active {
+      background-color: blueviolet;
+    }
+    &__deaths {
+      background-color: grey;
+    }
+  }
+
+  &__count__primary {
+    font-weight: 200;
+    text-align: center;
+    width: 100%;
+  }
+  &__count__secondary {
+    text-align: center;
+    width: 100%;
   }
 }
