@@ -26,7 +26,6 @@
 }
 
 html {
-  height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
@@ -44,12 +43,11 @@ body {
 }
 
 .container {
-  max-width: 130rem;
+  max-width: 140rem;
   margin: 5rem auto;
   background-color: var(--color-Grey-light-1);
   -webkit-box-shadow: var(--shadow-dark);
           box-shadow: var(--shadow-dark);
-  min-height: 50rem;
 }
 
 .content {
@@ -327,9 +325,9 @@ body {
 }
 
 .overview__rating {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .overview__rating--average {
@@ -387,6 +385,73 @@ body {
           align-items: center;
 }
 
+.statewise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.statewise__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.statewise__stats__items--active {
+  margin: 1rem;
+  background-color: #e4cff8;
+  color: blueviolet;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.statewise__stats__items--confirmed {
+  margin: 1rem;
+  background-color: #f5dada;
+  color: red;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.statewise__stats__items--deaths {
+  margin: 1rem;
+  background-color: #e7e7e7;
+  color: grey;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.statewise__stats__items--recovered {
+  margin: 1rem;
+  background-color: #bdebbd;
+  color: green;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.statewise__stats .stats__h2 {
+  font-weight: 200;
+}
+
+.statewise__stats .stats__h1 {
+  font-size: large;
+}
+
+.statewise__district {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .btn-inline {
   color: var(--color-primary);
   border: none;
@@ -406,28 +471,14 @@ body {
   border-bottom: 1px solid var(--color-Grey-dark-1);
 }
 
-.statewise {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.statewise__district {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
 .table {
   font-size: 1.2rem;
-  margin: 2rem;
+  margin: 4rem;
 }
 
 .table td,
 .table th {
-  padding: 1rem;
+  padding: 1.4rem;
 }
 
 .table tr:nth-of-type(odd) {

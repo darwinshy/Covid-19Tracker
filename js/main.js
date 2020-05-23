@@ -16,7 +16,7 @@ for (var i = 5; i < 77; i++) {
     stateName[0].innerHTML = stNm.getAttribute("title");
     setInterval(function () {
       stateName[0].style.opacity = "1";
-    }, 500);
+    }, 300);
   });
   path.childNodes[i].addEventListener("mouseout", (state) => {
     document.getElementById(state.target["id"]).style.fill = "#efefef";

@@ -179,8 +179,8 @@
     padding: 1.5rem 3rem;
     transition: all 0.1s;
   }
-  &__location {
-  }
+  // &__location {
+  // }
 
   &__icon--location {
     width: 1.5rem;
@@ -192,7 +192,7 @@
     font-weight: 100;
   }
   &__rating {
-    align-self: stretch;
+    align-self: center;
   }
   &__rating--average {
     padding: 1rem;
@@ -206,7 +206,6 @@
   &__details {
     display: flex;
     &--content {
-      // background-color: blue;
       flex-basis: 70%;
     }
 
@@ -231,6 +230,64 @@
     }
   }
 }
+
+.statewise {
+  display: flex;
+  justify-content: center;
+  &__stats {
+    display: flex;
+    flex-direction: row;
+
+    &__items {
+      &--active {
+        margin: 1rem;
+        background-color: rgb(228, 207, 248);
+        color: blueviolet;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+
+      &--confirmed {
+        margin: 1rem;
+        background-color: rgb(245, 218, 218);
+        color: red;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+
+      &--deaths {
+        margin: 1rem;
+        background-color: rgb(231, 231, 231);
+        color: grey;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+
+      &--recovered {
+        margin: 1rem;
+        background-color: rgb(189, 235, 189);
+        color: green;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+    }
+
+    .stats {
+      &__h2 {
+        font-weight: 200;
+      }
+
+      &__h1 {
+        font-size: large;
+      }
+    }
+  }
+
+  &__district {
+    display: flex;
+    align-self: flex-start;
+  }
+}
 .btn-inline {
   color: var(--color-primary);
   border: none;
@@ -245,18 +302,5 @@
   &:hover {
     color: var(--color-Grey-dark-1);
     border-bottom: 1px solid var(--color-Grey-dark-1);
-  }
-}
-
-.statewise {
-  display: flex;
-  // justify-content: center;
-  &__stats {
-    
-  }
-
-  &__district {
-    display: flex;
-    align-self: flex-start;
   }
 }
