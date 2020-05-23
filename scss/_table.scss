@@ -1,0 +1,13 @@
+.table {
+  font-size: 1.2rem;
+  margin: 2rem;
+
+  td,
+  th {
+    padding: 1rem;
+  }
+
+  tr:nth-of-type(odd) {
+    background-color: #f6f6f7;
+  }
+}

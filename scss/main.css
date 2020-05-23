@@ -44,8 +44,8 @@ body {
 }
 
 .container {
-  max-width: 120rem;
-  margin: 10rem auto;
+  max-width: 130rem;
+  margin: 5rem auto;
   background-color: var(--color-Grey-light-1);
   -webkit-box-shadow: var(--shadow-dark);
           box-shadow: var(--shadow-dark);
@@ -311,6 +311,8 @@ body {
   letter-spacing: 1px;
   margin-right: auto;
   padding: 1.5rem 3rem;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 .overview__icon--location {
@@ -320,7 +322,7 @@ body {
 }
 
 .overview .av {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 100;
 }
 
@@ -372,6 +374,19 @@ body {
   stroke: #939393;
 }
 
+.overview__details--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn-inline {
   color: var(--color-primary);
   border: none;
@@ -389,5 +404,33 @@ body {
 .btn-inline:hover {
   color: var(--color-Grey-dark-1);
   border-bottom: 1px solid var(--color-Grey-dark-1);
+}
+
+.statewise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.statewise__district {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.table {
+  font-size: 1.2rem;
+  margin: 2rem;
+}
+
+.table td,
+.table th {
+  padding: 1rem;
+}
+
+.table tr:nth-of-type(odd) {
+  background-color: #f6f6f7;
 }
 /*# sourceMappingURL=main.css.map */
