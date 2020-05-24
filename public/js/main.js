@@ -1,6 +1,7 @@
 var path = document.getElementById("svg2");
 var stateName = document.getElementsByClassName("overview__heading");
 var timings = document.getElementsByClassName("av");
+var decide = document.getElementById("decide");
 
 setInterval(function () {
   timings[0].innerHTML = Date().substring(0, 25);
@@ -14,6 +15,10 @@ for (var i = 5; i < 77; i++) {
 
     stateName[0].style.opacity = "0";
     stateName[0].innerHTML = stNm.getAttribute("title");
+    var cod =
+      'if(state["stateCode"]==' + state.target["id"].substring(3, 5) + "){%>";
+    // decide.innerText = cod;
+
     setInterval(function () {
       stateName[0].style.opacity = "1";
     }, 300);

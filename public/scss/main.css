@@ -369,6 +369,8 @@ body {
 }
 
 .overview__details--map #svg2 path {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   stroke: #939393;
 }
 

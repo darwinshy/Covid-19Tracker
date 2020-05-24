@@ -218,6 +218,7 @@
         transform: scale(0.6);
 
         path {
+          transition: all 0.2s;
           stroke: rgb(147, 147, 147);
         }
       }

@@ -101,7 +101,7 @@
           </div>
 
           <div class="overview">
-            <h1 class="overview__heading">Covid 19</h1>
+            <h1 class="overview__heading" id="heading">Covid 19</h1>
             <div class="overview__location">
               <svg class="overview__icon--location">
                 <use xlink:href="img/sprite.svg#icon-location-pin"></use>
@@ -117,13 +117,19 @@
 
           <div class="overview__details">
             <div class="overview__details--content">
-              <div class="statewise__stats">
+              <div class="statewise__stats" id="statewise__stats">
+                <% stateData.forEach((state) => { var x;%>
+                <script>
+                  x = console.log(document.getElementById("heading").innerHTML);
+                </script>
+                <% if(state["stateCode"]=="UP"){ console.log(x); %>
+
                 <div class="statewise__stats__items--confirmed">
                   <h2 class="stats__h2">
                     Confirmed
                   </h2>
                   <h1 class="stats__h1">
-                    44,582
+                    <%=state["Confirmed"]%>
                   </h1>
                 </div>
                 <div class="statewise__stats__items--active">
@@ -131,7 +137,7 @@
                     Active
                   </h2>
                   <h1 class="stats__h1">
-                    66,308
+                    <%=state["Active"]%>
                   </h1>
                 </div>
                 <div class="statewise__stats__items--recovered">
@@ -139,7 +145,7 @@
                     Recovered
                   </h2>
                   <h1 class="stats__h1">
-                    66,308
+                    <%=state["Recovered"]%>
                   </h1>
                 </div>
                 <div class="statewise__stats__items--deaths">
@@ -147,9 +153,10 @@
                     Deaths
                   </h2>
                   <h1 class="stats__h1">
-                    66,308
+                    <%=state["Deaths"]%>
                   </h1>
                 </div>
+                <%}})%>
               </div>
               <div class="statewise__district">
                 <table class="table">
@@ -160,160 +167,20 @@
                     <th>Recovered</th>
                     <th>Deaths</th>
                   </tr>
+                  <% stateData.forEach((state) => {%>
+                  <%if(state["stateName"]!="State Unassigned"){%>
                   <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
+                    <td><%=state["stateName"]%></td>
+
+                    <td><%=state["Confirmed"]%></td>
+
+                    <td><%=state["Active"]%></td>
+
+                    <td><%=state["Recovered"]%></td>
+
+                    <td><%=state["Deaths"]%></td>
                   </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
-                  <tr>
-                    <td>Maharashtra</td>
-                    <td>44,582</td>
-                    <td>30,482</td>
-                    <td>12,583</td>
-                    <td>1,517</td>
-                  </tr>
+                  <%}})%>
                 </table>
               </div>
             </div>
