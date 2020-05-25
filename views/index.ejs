@@ -118,45 +118,30 @@
           <div class="overview__details">
             <div class="overview__details--content">
               <div class="statewise__stats" id="statewise__stats">
-                <% stateData.forEach((state) => { var x;%>
-                <script>
-                  x = console.log(document.getElementById("heading").innerHTML);
-                </script>
-                <% if(state["stateCode"]=="UP"){ console.log(x); %>
-
                 <div class="statewise__stats__items--confirmed">
                   <h2 class="stats__h2">
                     Confirmed
                   </h2>
-                  <h1 class="stats__h1">
-                    <%=state["Confirmed"]%>
-                  </h1>
+                  <h1 class="stats__h1" id="stC"><%=globalConfirmed%></h1>
                 </div>
                 <div class="statewise__stats__items--active">
                   <h2 class="stats__h2">
                     Active
                   </h2>
-                  <h1 class="stats__h1">
-                    <%=state["Active"]%>
-                  </h1>
+                  <h1 class="stats__h1" id="stA"><%=globalActive%></h1>
                 </div>
                 <div class="statewise__stats__items--recovered">
                   <h2 class="stats__h2">
                     Recovered
                   </h2>
-                  <h1 class="stats__h1">
-                    <%=state["Recovered"]%>
-                  </h1>
+                  <h1 class="stats__h1" id="stR"><%=globalRecovered%></h1>
                 </div>
                 <div class="statewise__stats__items--deaths">
                   <h2 class="stats__h2">
                     Deaths
                   </h2>
-                  <h1 class="stats__h1">
-                    <%=state["Deaths"]%>
-                  </h1>
+                  <h1 class="stats__h1" id="stD"><%=globalDeaths%></h1>
                 </div>
-                <%}})%>
               </div>
               <div class="statewise__district">
                 <table class="table">

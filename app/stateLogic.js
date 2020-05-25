@@ -22,7 +22,7 @@ module.exports = [
         Deaths: d,
       });
     }
-
+    console.log(map);
     return map;
   },
 ];
