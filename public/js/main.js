@@ -11,6 +11,7 @@ var myArr;
 var stateDataForJs = new Map();
 var xmlhttp = new XMLHttpRequest();
 var url = "https://api.covid19india.org/state_district_wise.json";
+
 xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     myArr = JSON.parse(this.responseText);
@@ -24,7 +25,7 @@ setInterval(function () {
   timings[0].innerHTML = Date().substring(0, 25);
 }, 1000);
 
-for (var i = 5; i < 100; i++) {
+for (var i = 1; i < 73; i++) {
   path.childNodes[i].addEventListener("mouseover", (state) => {
     document.getElementById(state.target["id"]).style.fill = "#9b9b9b";
 
@@ -39,10 +40,10 @@ for (var i = 5; i < 100; i++) {
 
     // Changing Data StateWise on Hover Logic
     var stateId = state.target["id"].substring(3, 5);
-    stC.innerHTML = getStateDataWithID(stateId)[0];
-    stA.innerHTML = getStateDataWithID(stateId)[1];
-    stR.innerHTML = getStateDataWithID(stateId)[2];
-    stD.innerHTML = getStateDataWithID(stateId)[3];
+    stC.innerText = getStateDataWithID(stateId)[0];
+    stA.innerText = getStateDataWithID(stateId)[1];
+    stR.innerText = getStateDataWithID(stateId)[2];
+    stD.innerText = getStateDataWithID(stateId)[3];
   });
   path.childNodes[i].addEventListener("mouseout", (state) => {
     document.getElementById(state.target["id"]).style.fill = "#efefef";
@@ -51,7 +52,8 @@ for (var i = 5; i < 100; i++) {
 
 // Getting Data Logics
 function getMappedData(completeData) {
-  var map = new Map();
+  var map = [];
+  var finalmap = new Map();
   for (var stateName in completeData) {
     var c = 0,
       a = 0,
@@ -64,7 +66,7 @@ function getMappedData(completeData) {
       d = d + parseInt(completeData[stateName].districtData[city].deceased);
     }
 
-    map.set(stateName, {
+    map.push(stateName, {
       stateName: stateName,
       stateCode: completeData[stateName].statecode,
       Confirmed: c,
@@ -73,8 +75,36 @@ function getMappedData(completeData) {
       Deaths: d,
     });
   }
+  // console.log(map);
+  map.sort(function (a, b) {
+    var x = a.Confirmed;
+    var y = b.Confirmed;
 
-  return map;
+    if (x == undefined) {
+      x = 0;
+    }
+    if (y == undefined) {
+      y = 0;
+    }
+
+    // console.log(x);
+    // console.log(y);
+
+    if (x == y) {
+      return 0;
+    } else {
+      return x > y ? -1 : 1;
+    }
+  });
+
+  map.forEach((element) => {
+    if (element["stateName"] != "State Unassigned")
+      if (element.Confirmed != undefined) {
+        finalmap.set(element.stateName, element);
+      }
+  });
+
+  return finalmap;
 }
 
 function getStateDataWithID(id) {

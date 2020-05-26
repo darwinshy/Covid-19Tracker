@@ -1,6 +1,7 @@
 module.exports = [
   function getMappedData(completeData) {
-    var map = new Map();
+    var map = [];
+    var finalmap = new Map();
     for (var stateName in completeData) {
       var c = 0,
         a = 0,
@@ -13,7 +14,7 @@ module.exports = [
         d = d + parseInt(completeData[stateName].districtData[city].deceased);
       }
 
-      map.set(stateName, {
+      map.push(stateName, {
         stateName: stateName,
         stateCode: completeData[stateName].statecode,
         Confirmed: c,
@@ -22,7 +23,32 @@ module.exports = [
         Deaths: d,
       });
     }
-    console.log(map);
-    return map;
+
+    map.sort(function (a, b) {
+      var x = a.Confirmed;
+      var y = b.Confirmed;
+
+      if (x == undefined) {
+        x = 0;
+      }
+      if (y == undefined) {
+        y = 0;
+      }
+
+      if (x == y) {
+        return 0;
+      } else {
+        return x > y ? -1 : 1;
+      }
+    });
+
+    map.forEach((element) => {
+      if (element["stateName"] != "State Unassigned")
+        if (element.Confirmed != undefined) {
+          finalmap.set(element.stateName, element);
+        }
+    });
+
+    return finalmap;
   },
 ];

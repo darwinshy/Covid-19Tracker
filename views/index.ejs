@@ -50,7 +50,7 @@
               </a>
             </li>
           </ul>
-          <div class="legal">Copyright Reserved Shashwat Priyadarshy</div>
+          <div class="legal">Copyright Reserved <Br />Shashwat Priyadarshy</div>
         </nav>
         <main class="covid-view">
           <div class="cases">
@@ -101,12 +101,12 @@
           </div>
 
           <div class="overview">
-            <h1 class="overview__heading" id="heading">Covid 19</h1>
+            <h1 class="overview__heading" id="heading">India</h1>
             <div class="overview__location">
-              <svg class="overview__icon--location">
+              <!-- <svg class="overview__icon--location">
                 <use xlink:href="img/sprite.svg#icon-location-pin"></use>
-              </svg>
-              <button class="btn-inline">Select Location</button>
+              </svg> -->
+              <!-- <button class="btn-inline">Select Location</button> -->
             </div>
             <div class="overview__rating">
               <div class="overview__rating--average">
@@ -152,8 +152,9 @@
                     <th>Recovered</th>
                     <th>Deaths</th>
                   </tr>
-                  <% stateData.forEach((state) => {%>
-                  <%if(state["stateName"]!="State Unassigned"){%>
+
+                  <% stateData.forEach((state) => {%> <%if(state["stateName"] !=
+                  "State Unassigned"){%> <%if(state.Confirmed!=undefined){%>
                   <tr>
                     <td><%=state["stateName"]%></td>
 
@@ -165,12 +166,15 @@
 
                     <td><%=state["Deaths"]%></td>
                   </tr>
-                  <%}})%>
+                  <%}}})%>
                 </table>
               </div>
             </div>
 
             <div class="overview__details--map">
+              <h1 class="overview__details--label">
+                Hover over a state for more details
+              </h1>
               <svg id="svg2" height="695.70178" width="611.585999">
                 <path
                   id="IN-AN"
@@ -354,7 +358,9 @@
                 />
               </svg>
 
-              <div class="overview__details--history">History</div>
+              <div class="overview__details--history">
+                <canvas id="myChart" width="300" height="300"></canvas>
+              </div>
             </div>
           </div>
         </main>
@@ -362,4 +368,10 @@
     </div>
   </body>
   <script type="text/javascript" src="js/main.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"
+    integrity="sha256-nZaxPHA2uAaquixjSDX19TmIlbRNCOrf5HO1oHl5p70="
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript" src="js/dataVisual.js"></script>
 </html>
