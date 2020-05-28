@@ -39,6 +39,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--color-Grey-dark-2);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media only screen and (max-width: 600px) {
