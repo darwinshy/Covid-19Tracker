@@ -134,7 +134,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .footer {
-    width: 100%;
+    width: 150vw;
     height: 30rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
