@@ -171,6 +171,9 @@ body {
   .cases__item {
     width: 100% !important;
   }
+  .side-nav {
+    display: none;
+  }
 }
 
 .logo {
