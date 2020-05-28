@@ -5,7 +5,7 @@
   // box-shadow: var(--shadow-dark);
   // min-height: 50rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .content {
@@ -43,17 +43,15 @@
 }
 
 .footer {
+  align-self: stretch;
   display: flex;
   background-color: var(--color-Grey-light-2);
   height: 20rem;
   justify-content: space-evenly;
-  width: 100vw;
-  // margin-top: 30rem;
 }
 
 @media only screen and (max-width: 600px) {
   .footer {
-    width: 150vw;
     height: 30rem;
     flex-direction: column;
   }
