@@ -55,7 +55,7 @@
       width: 100% !important;
     }
   }
-  .side-nav {
+  .sidebar {
     display: none;
   }
 }
@@ -385,4 +385,26 @@
   margin-right: 3rem;
   width: 60rem !important;
   // height: 40rem !important;
+}
+
+.footer {
+  &__foot {
+    width: 50rem;
+    align-self: center;
+    text-align: center;
+  }
+  h1 {
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  .bold {
+    font-weight: 100;
+    font-size: 2rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  img {
+    margin: 1rem;
+    width: 20px;
+    height: 20px;
+  }
 }
