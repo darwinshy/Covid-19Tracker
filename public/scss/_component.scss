@@ -174,15 +174,14 @@
 
   &__item {
     width: 100%;
-    border-left: 1px solid;
-    border-color: white;
+    // border-left: 1px solid;
+    background-color: var(--color-Grey-light-1);
     padding: 1rem 3rem;
     &__confirmed {
       // background-color: red;
       transition: all 0.2s;
 
       &:hover {
-        background-color: white;
         color: red;
         width: 110%;
       }
@@ -192,7 +191,6 @@
       transition: all 0.2s;
 
       &:hover {
-        background-color: white;
         color: green;
         width: 110%;
       }
@@ -202,7 +200,6 @@
       transition: all 0.2s;
 
       &:hover {
-        background-color: white;
         color: blueviolet;
         width: 110%;
       }
@@ -213,7 +210,6 @@
       width: 100%;
 
       &:hover {
-        background-color: white;
         color: grey;
         width: 120%;
       }

@@ -49,7 +49,7 @@ body {
 }
 
 .container {
-  background-color: var(--color-Grey-light-1);
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,6 +132,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 100vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -333,8 +334,7 @@ body {
 
 .cases__item {
   width: 100%;
-  border-left: 1px solid;
-  border-color: white;
+  background-color: var(--color-Grey-light-1);
   padding: 1rem 3rem;
 }
 
@@ -344,7 +344,6 @@ body {
 }
 
 .cases__item__confirmed:hover {
-  background-color: white;
   color: red;
   width: 110%;
 }
@@ -355,7 +354,6 @@ body {
 }
 
 .cases__item__recovered:hover {
-  background-color: white;
   color: green;
   width: 110%;
 }
@@ -366,7 +364,6 @@ body {
 }
 
 .cases__item__active:hover {
-  background-color: white;
   color: blueviolet;
   width: 110%;
 }
@@ -378,7 +375,6 @@ body {
 }
 
 .cases__item__deaths:hover {
-  background-color: white;
   color: grey;
   width: 120%;
 }
