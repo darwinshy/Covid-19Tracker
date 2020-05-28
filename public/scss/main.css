@@ -43,7 +43,6 @@ body {
 
 @media only screen and (max-width: 600px) {
   body {
-    width: 100%;
     overflow-x: hidden;
   }
 }
@@ -56,6 +55,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  justify-self: center;
 }
 
 .content {
@@ -105,15 +105,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0;
 }
 
 .details {
@@ -201,9 +195,6 @@ body {
   .statewise__items--recovered {
     margin: 0.2rem;
     padding: 0.5rem;
-  }
-  .cases__item {
-    width: 100% !important;
   }
   .side-nav {
     display: none;

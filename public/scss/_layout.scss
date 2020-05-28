@@ -6,6 +6,7 @@
   // min-height: 50rem;
   display: flex;
   flex-direction: column;
+  justify-self: center;
 }
 
 .content {
@@ -33,9 +34,9 @@
 .covid-view {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  // width: fit-content;
   height: fit-content;
-  flex: 1 0 0;
+  // flex: 1 0 0;
 }
 
 .details {
