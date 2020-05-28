@@ -1,3 +1,56 @@
+@media only screen and (max-width: 600px) {
+  .cases {
+    flex-direction: column;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .overview__details {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .statewise__district {
+    margin: 0;
+  }
+  .overview__details--map {
+    transform: scale(0.6);
+    margin: -5rem;
+  }
+  .chart {
+    margin-right: -3rem !important;
+    width: 60rem !important;
+    // height: 40rem !important;
+  }
+  .statewise {
+    &__items {
+      &--active {
+        margin: 0.5rem;
+        padding: 0.5rem;
+      }
+
+      &--confirmed {
+        margin: 0.5rem;
+        padding: 0.5rem;
+      }
+
+      &--deaths {
+        margin: 0.5rem;
+        padding: 0.5rem;
+      }
+
+      &--recovered {
+        margin: 0.5rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+  // .legal {
+  //   color: #333333;
+  //   height: 1rem;
+  // }
+}
+
 // ////////////////////////////////////////////
 // Logo
 .logo {
@@ -145,7 +198,7 @@
     &__deaths {
       // background-color: grey;
       transition: all 0.2s;
-      width: 110%;
+      width: 100%;
 
       &:hover {
         background-color: white;
@@ -319,6 +372,8 @@
   }
 }
 
-#myChart {
+.chart {
   margin-right: 3rem;
+  width: 60rem !important;
+  // height: 40rem !important;
 }

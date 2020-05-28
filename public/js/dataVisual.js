@@ -38,30 +38,32 @@ console.log(confirmedLabel);
 
 setTimeout(() => {
   var myChart = new Chart(ctx, {
-    type: "bar",
+    type: "line",
     data: {
       labels: datesLabel,
       datasets: [
         {
           data: confirmedLabel,
           label: "Confirmed",
-          backgroundColor: "red",
+          borderColor: "red",
           fill: false,
         },
         {
           data: recoveredLabel,
           label: "Recovered",
-          backgroundColor: "green",
+          borderColor: "green",
           fill: false,
         },
         {
           data: deathsLabel,
           label: "Deaths",
-          backgroundColor: "grey",
+          borderColor: "grey",
           fill: false,
         },
       ],
       options: {
+        responsive: true,
+        maintainAspectRatio: true,
         title: {
           display: true,
           text: "Cases in India",
