@@ -168,6 +168,9 @@ body {
     margin: 0.2rem;
     padding: 0.5rem;
   }
+  .cases__item {
+    width: 100% !important;
+  }
 }
 
 .logo {
