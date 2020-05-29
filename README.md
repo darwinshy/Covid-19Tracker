@@ -1,3 +1,3 @@
 # Covid-19Tracker
 
-### <a href="https://reverope.github.io/Covid-19Tracker/">Click to See</a>
+### <a href="https://trackthecovid19.herokuapp.com/">Click to See</a>
